@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="panel  panel-primary">
+    <div class="panel-heading">创建事项</div>
+    <div class="panel-body">
+      <form [formGroup]="createFrom" (ngSubmit)="onSubmit()">
+        <div class="form-group ">
+          <label class="col-sm-2 control-label">事项名称:</label>
+          <div class="col-sm-8 input-group">
+            <span class="input-group-addon glyphicon glyphicon-file"></span>
+            <input class="form-control" type="text" formControlName='itemName' placeholder="事项名称" required
+              autocomplete="off">
+          </div>
+
+        </div>
+        <div class="form-group ">
+          <label class="col-sm-2 control-label">事项类型:</label>
+          <div class="col-sm-8 input-group">
+            <span class="input-group-addon glyphicon glyphicon-cog"></span>
+            <select class="form-control" formControlName='itemType' required>
+              <option>工作事项</option>
+              <option>学习事项</option>
+              <option>生活事项</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="form-group ">
+          <label class="col-sm-2 control-label">办理时间:</label>
+          <div class="col-sm-8 input-group">
+            <span class="input-group-addon glyphicon glyphicon-eye-open"></span>
+            <input class="form-control" type="date" formControlName='itemDate' placeholder="办理时间" required
+              autocomplete="off">
+          </div>
+
+        </div>
+        <div class="form-group ">
+          <label class="col-sm-2 control-label">处理人:</label>
+          <div class="col-sm-8 input-group">
+            <span class="input-group-addon glyphicon glyphicon-user"></span>
+            <input class="form-control" type="text" formControlName='itemPerson' placeholder="处理人" required
+              autocomplete="off">
+          </div>
+
+        </div>
+
+        <div class="form-group ">
+          <label class="col-sm-2 control-label">优先级:</label>
+          <label class="radio-inline">
+            <input type="radio" formControlName='itemPriority' name="itemPriority" id="inlineRadio1" value="严重"> 严重
+          </label>
+          <label class="radio-inline">
+            <input type="radio" formControlName='itemPriority' name="itemPriority" id="inlineRadio2" value="紧急"> 紧急
+          </label>
+          <label class="radio-inline">
+            <input type="radio" formControlName='itemPriority' name="itemPriority" id="inlineRadio3" value="一般"> 一般
+          </label>
+          <label class="radio-inline">
+            <input type="radio" formControlName='itemPriority' name="itemPriority" id="inlineRadio3" value="轻微"> 轻微
+          </label>
+
+        </div>
+
+          <div class="form-group ">
+            <label class="col-sm-2 control-label">备注:</label>
+            <div class="col-sm-8 input-group">
+              <span class="input-group-addon glyphicon glyphicon-user"></span>
+              <input class="form-control" type="text" formControlName='itemReamkes' placeholder="请添加备注" autocomplete="off">
+            </div>
+
+          </div>
+
+        <div class="form-group">
+          <div class=" col-sm-offset-2 col-sm-2">
+            <button class="btn btn-primary btn-block" type="submit">创建</button>
+          </div><div class=" col-sm-offset-2 col-sm-2">
+            <button class="btn btn-primary btn-block" type="button" (click)="onReset()">清空</button>
+          </div>
+          <div class=" col-sm-offset-2 col-sm-2">
+            <button class="btn btn-primary btn-block " (click)="back()">返回</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

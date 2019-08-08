@@ -1,0 +1,9 @@
+<div class="grid grid-pad">
+  <div *ngFor="let item of itemType" class="col-1-4">
+    <div class="module hero">
+      <h4>{{item.type}}</h4>
+      <div>{{ item.number$ | async}}</div>
+    </div>
+  </div>
+</div>
+

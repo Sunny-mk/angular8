@@ -1,0 +1,17 @@
+<table class="table table-bordered  table-striped">
+  <thead>
+    <tr>
+      <th *ngIf="checkbox">#</th>
+      <th *ngFor="let head of header">{{head}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data  let i=index;">
+      <td *ngIf="row&&checkbox"><input type="checkbox" (click)="changeDate($event,i)"></td>
+      <td *ngFor="let  item of row | keyvalue">
+        <span>{{item.value}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-page-navigation [pages]=pages (selectPage)="onCheckbox($event)"></app-page-navigation>

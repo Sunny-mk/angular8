@@ -1,0 +1,19 @@
+.left-menu{
+    padding-left: 0 !important;
+    padding-top:0 !important;
+    padding-right:0 !important;
+    height: 100%;
+}
+.left{
+    padding-left: 0 !important;
+    padding-top:0 !important;
+    padding-right:0 !important;
+    height:100%;
+}
+nav{
+    height:100%;
+    width: 100%;
+}
+ul{
+    width: 100%;
+}
